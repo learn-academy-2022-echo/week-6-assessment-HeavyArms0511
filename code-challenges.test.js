@@ -1,5 +1,8 @@
 // ASSESSMENT 6: JavaScript Coding Practical Questions with Jest
 
+const { it } = require("node:test")
+const { array, describe } = require("yargs")
+
 // Please read all questions thoroughly
 // Pseudo coding is REQUIRED
 // If you get stuck, please leave comments to help us understand your thought process
@@ -21,7 +24,44 @@ const people = [
 ]
 // Expected output: ["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is president of the galaxy.", "Arthur Dent is a radio employee."]
 
+describe('sentencemaker', () => {
+  it('takes in an array of objects and returns an array with a sentence about each person with their name capitalized', () => {
+    expect(sentencemaker(people)).toEqual(["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is president of the galaxy.", "Arthur Dent is a radio employee."])
+  })
+})
+
+// FAIL  ./code-challenges.test.js
+// sentencemaker
+//   ✕ takes in an array of objects and returns an array with a sentence about each person with their name capitalized (1 ms)
+
+// ● sentencemaker › takes in an array of objects and returns an array with a sentence about each person with their name capitalized
+
+//   ReferenceError: sentencemaker is not defined
+
+
+
 // b) Create the function that makes the test pass.
+
+//PSUEDOCODE:
+// Create a function called sentencemaker
+// Input:
+  // try to figure out how to use HoF
+  // Take in an array
+  // Iterate through the array 
+    // what method?
+  // capitilize the string in the name key
+    // how to capitalize?
+    // how to capitalize both names in the single string?
+  // return a sentence using string interpolation
+// Expected Output:
+  // ["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is president of the galaxy.", "Arthur Dent is a radio employee."]
+
+  
+
+
+  
+
+
 
 // --------------------2) Create a function that takes in a mixed data array and returns an array of only the REMAINDERS of the numbers when divided by 3.
 
@@ -31,6 +71,16 @@ const hodgepodge1 = [23, "Heyyyy!", 45, -10, 0, "Yo", false]
 // Expected output: [ 2, 0, -1, 0 ]
 const hodgepodge2 = [5, "Hola", 43, -34, "greetings", true]
 // Expected output: [ 2, 1, -1 ]
+
+
+describe('remainder', () => {
+  it('takes in a mixed data array and returns an array of only the REMAINDERS of the numbers when divided by 3', () => {
+    expect(remainder(hodgepodge1)).toEqual([ 2, 0, -1, 0 ])
+    expect(remainder(hodgepodge2)).toEqual([2, 1, -1])
+  })
+})
+
+
 
 // b) Create the function that makes the test pass.
 
@@ -42,5 +92,14 @@ const cubeAndSum1 = [2, 3, 4]
 // Expected output: 99
 const cubeAndSum2 = [0, 5, 10]
 // Expected output: 1125
+
+
+describe('sumAll', () => {
+  it('akes in an array of numbers and returns the sum of all the numbers cubed', () => {
+    expect(sumAll(cubeAndSum1)).toEqual(99)
+    expect(sumAll(cubeAndSum2)).toEqual(1125)
+  })
+})
+
 
 // b) Create the function that makes the test pass.
