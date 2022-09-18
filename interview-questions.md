@@ -13,10 +13,12 @@ Your answer: You can fix this by using migration.  I actually made this error wh
 Researched answer: After some reaserch my answer seems to cover everthing that was asked.  It verified that you want the foreign key to be the modelname_id which in this case would be cohort_id would be one of the student parameters.  Also after some research migration is the proper way to fix a model if you forget to add a foreign key or any type of parameter you wanted to add but forgot.
 
 2. Which RESTful routes must always be passed params? Why?
+A param is an arguement for different things. The create and update require a param becuase you are telling it which one you are updating and with the data you want while create is making a new instance variable with the params you have defined.  Show requires only a param in the URL.  You are asking it which particular instance you want to look at.  Delete is the last one that requires a param because you are telling it which instance you want to delete.
 
-Your answer:
 
-Researched answer:
+Researched answer: After some research I kept having trouble finding exactly what I was looking for either due to me not being able to word the question properly or understanding what the question is asking.  So I guess my blocker is I'm not exactly sure what its asking so the best I could do was come up with what I believe the question was asking.  More insight on this would be wonderful so I can understand it.  Thank you.
+
+
 
 3. Name three rails generator commands. What is created by each?
 
